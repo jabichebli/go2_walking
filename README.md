@@ -13,3 +13,6 @@
 ~/content/mjlab/src/mjlab/asset_zoo/robots/unitree_go2/go2_constants.py 
 
 ~/content/mjlab/src/mj1ab/tasks/velocity/config/go2/
+
+~/content/mjlab/src/mjlab/asset_zoo/robots/__init__.py
+~/content/mjlab/src/mjlab/asset_zoo/README.md
