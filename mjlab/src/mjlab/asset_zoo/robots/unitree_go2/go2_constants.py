@@ -156,7 +156,7 @@ def get_go2_robot_cfg() -> EntityCfg:
 GO2_ACTION_SCALE: dict[str, float] = {}
 # Action scale multiplier: 0.25 = conservative, 0.5 = moderate, 1.0 = full range
 # For difficult maneuvers like backflips, consider increasing to 0.5 or higher
-ACTION_SCALE_MULTIPLIER = 1.0
+ACTION_SCALE_MULTIPLIER = 0.25
 for a in GO2_ARTICULATION.actuators:
   assert isinstance(a, BuiltinPositionActuatorCfg)
   e = a.effort_limit
