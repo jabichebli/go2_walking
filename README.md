@@ -11,3 +11,5 @@
 
 ## Important files
 ~/content/mjlab/src/mjlab/asset_zoo/robots/unitree_go2/go2_constants.py 
+
+~/content/mjlab/src/mj1ab/tasks/velocity/config/go2/
