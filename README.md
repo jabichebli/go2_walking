@@ -16,3 +16,4 @@
 
 ~/content/mjlab/src/mjlab/asset_zoo/robots/__init__.py
 ~/content/mjlab/src/mjlab/asset_zoo/README.md
+~/content/mjlab/pyproject.toml
