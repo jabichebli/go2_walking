@@ -1,0 +1,46 @@
+--- git status ---
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   mjlab/pyproject.toml
+	modified:   mjlab/src/mjlab/tasks/velocity/rl/runner.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	mjlab/logs/rsl_rl/go1_velocity/2026-02-04_00-18-02/
+	mjlab/logs/rsl_rl/go2_velocity/
+	mjlab/uv.lock
+
+no changes added to commit (use "git add" and/or "git commit -a") 
+
+
+--- git diff ---
+diff --git a/mjlab/pyproject.toml b/mjlab/pyproject.toml
+index 5f89df1..282dae1 100644
+--- a/mjlab/pyproject.toml
++++ b/mjlab/pyproject.toml
+@@ -37,7 +37,7 @@ dependencies = [
+     "torch>=2.7.0",
+     "warp-lang",
+     "mujoco-warp",
+-    "mujoco<=3.3.8",
++    "mujoco>=3.3.7",
+     "trimesh>=4.8.3",
+     "viser>=1.0.15",
+     "moviepy",
+diff --git a/mjlab/src/mjlab/tasks/velocity/rl/runner.py b/mjlab/src/mjlab/tasks/velocity/rl/runner.py
+index 17810c5..916ab2c 100644
+--- a/mjlab/src/mjlab/tasks/velocity/rl/runner.py
++++ b/mjlab/src/mjlab/tasks/velocity/rl/runner.py
+@@ -16,7 +16,7 @@ class VelocityOnPolicyRunner(OnPolicyRunner):
+   def save(self, path: str, infos=None):
+     """Save the model and training information."""
+     super().save(path, infos)
+-    if self.logger_type in ["wandb"]:
++    if getattr(self, "logger_type", None) in ["wandb"]:  # Safely check if 'logger_type' exists before checking if it is 'wandb'
+       policy_path = path.split("model")[0]
+       filename = os.path.basename(os.path.dirname(policy_path)) + ".onnx"
+       if self.alg.policy.actor_obs_normalization:
