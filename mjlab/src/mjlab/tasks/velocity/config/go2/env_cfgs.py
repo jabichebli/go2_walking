@@ -6,6 +6,7 @@ from mjlab.asset_zoo.robots import (
   GO2_ACTION_SCALE,
   get_go2_robot_cfg,
 )
+
 from mjlab.envs import ManagerBasedRlEnvCfg
 from mjlab.managers.manager_term_config import TerminationTermCfg
 from mjlab.sensor import ContactMatch, ContactSensorCfg
