@@ -37,7 +37,7 @@ dependencies = [
     "torch>=2.7.0",
     "warp-lang",
     "mujoco-warp",
-    "mujoco = ">=3.3.7",
+    "mujoco>=3.3.7",
     "trimesh>=4.8.3",
     "viser>=1.0.15",
     "moviepy",
